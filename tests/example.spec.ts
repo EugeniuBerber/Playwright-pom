@@ -6,6 +6,8 @@ test('has title', async ({ page }) => {
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
   console.log("Console log from test: " + process.env.PASSWORD);
+  console.log("Console log from test, Printing the $SMTH values: " + process.env.SMTH);
+
 });
 
 test('get started link', async ({ page }) => {
