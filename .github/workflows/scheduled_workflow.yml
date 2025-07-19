@@ -7,6 +7,9 @@ jobs:
     name: 'Playwright Tests Docker'
     timeout-minutes: 15
     runs-on: ubuntu-latest
+    env:
+      PASSWORD: ${{ secret.SECRET_KEY }}
+      SMTH: "This is a values defined in the workflow"
     container:
       image: mcr.microsoft.com/playwright:v1.54.0-noble
       options: --user 1001
