@@ -17,7 +17,7 @@ jobs:
       - name: Debug secret and env
         run: |
           echo "This is the PASSWORD env var: $PASSWORD"
-          echo "Custom variable: $SMTH"
+          echo "Custom variable defined in yml file: $SMTH"
         shell: bash
 
       - name: Checkout code
