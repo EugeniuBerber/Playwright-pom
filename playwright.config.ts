@@ -38,7 +38,24 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-
+    {
+      name: 'API_TESTS',
+      testMatch: 'tests/API/*.spec.ts',
+      retries: 0,
+      use: {
+        actionTimeout: 15_000,
+      },
+    },
+    {
+      name: "e2e",
+      testMatch: "**/tests/e2e/*.spec.ts",
+      retries: 0,
+      use: {
+        ...devices["Desktop Chromium"],
+        viewport: { width: 1920, height: 1080 },
+        actionTimeout: 30_000,
+      },
+    },
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },

@@ -12,10 +12,17 @@ test('has title', async ({ page }) => {
 
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
-
+  console.log("Get Started Link - Test")
   // Click the get started link.
   await page.getByRole('link', { name: 'Get started' }).click();
 
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
+
+test.beforeAll('Executes before all tests', async ({})=>{
+  console.log('% This will execute before all tests will start %');
+})
+test.afterAll('Executes after all tests', async ({})=>{
+  console.log('% FINISH %');
+})

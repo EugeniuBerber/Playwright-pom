@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "smokeWithEnvVar" : "PASSWORD=IMBA SMTH=myValue npx playwright test"
+    "testWithEnvVar" : "PASSWORD=IMBA SMTH=myValue npx playwright test"
   },
   "repository": {
     "type": "git",
