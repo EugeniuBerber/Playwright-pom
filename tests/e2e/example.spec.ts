@@ -5,7 +5,7 @@ test('has title', async ({ page }) => {
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
-  console.log("Console log from test: " + process.env.PASSWORD);
+  console.log("Console log from test, printing the process.env.PASSWORD that is coming from github secrets: " + process.env.PASSWORD);
   console.log("Console log from test, Printing the $SMTH values: " + process.env.SMTH);
 
 });
