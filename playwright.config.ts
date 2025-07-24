@@ -39,7 +39,7 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
     {
-      name: 'API_TESTS',
+      name: 'API',
       testMatch: 'tests/API/*.spec.ts',
       retries: 0,
       use: {
