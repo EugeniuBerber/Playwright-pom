@@ -8,11 +8,16 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     env:
-      PASSWORD: ${{ secret.SECRET_KEY }}
+      PASSWORD: ${{ secrets.SECRET_KEY }}
       SMTH: "This is a values defined in the workflow"
     container:
       image: mcr.microsoft.com/playwright:v1.54.0-noble
     steps:
+      - name: Debug secret presence
+        run:
+          echo "SECRET KEY = $PASSWORD"
+          echo "Workflow defined var SMTH = $SMTH"
+          echo "Length of PASSWORD is:" ${#PASSWORD}
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
