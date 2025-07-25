@@ -19,10 +19,10 @@ test('get started link', async ({ page }) => {
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
-
-test.beforeAll('Executes before all tests', async ({})=>{
-  console.log('% This will execute before all tests will start %');
-})
-test.afterAll('Executes after all tests', async ({})=>{
-  console.log('% FINISH %');
-})
+//
+// test.beforeAll('Executes before all tests', async ({})=>{
+//   console.log('% This will execute before all tests will start %');
+// })
+// test.afterAll('Executes after all tests', async ({})=>{
+//   console.log('% FINISH %');
+// })
